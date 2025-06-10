@@ -1,0 +1,112 @@
+body {
+    background-image: url('imagens/bege.jpg');
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.carta-container {
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    max-width: 600px;
+    text-align: center;
+    border: 2px solid #8d5524;
+}
+
+.imagem-topo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.imagem-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.flores-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.flores-container.esquerda {
+    left: 450px;
+}
+
+.flores-container.direita {
+    right: 450px;
+}
+
+.flores-container img {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slideshow-container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.mySlides img{
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.gif-below {
+    width: 100%; 
+    max-width: 300px; 
+    display: block;
+    margin: 20px auto; 
+    border-radius: 10px; 
+}
+
+#musiquinha {
+    background-color: darkred;
+    color: white;
+    border: #8d5524;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+#musiquinha:houver {
+    background-color: crimson;
+}
+
+@media (max-width: 600px) { /* Para celulares */
+    .imagem-container {
+        flex-direction: column; /* Alinha verticalmente para telas menores */
+    }
+
+    .flores-container {
+        position: static; /* Remove posição absoluta para melhor adaptação */
+        display: flex;
+        flex-direction: row; /* Muda a organização das flores para horizontal */
+        justify-content: center; /* Centraliza abaixo da imagem */
+    }
+
+    .flores-container img {
+        width: 60px; /* Reduz o tamanho no celular */
+    }
+}
