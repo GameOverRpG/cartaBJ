@@ -31,30 +31,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
     position: relative;
 }
 
 .flores-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px; /* Reduz espaço entre as flores */
     position: absolute;
-    top: 55%;
+    top: 50%; /* Ajusta a posição vertical */
     transform: translateY(-50%);
 }
 
 .flores-container.esquerda {
-    left: 450px;
+    left: -80px; /* Ajusta para ficar ao lado esquerdo */
 }
 
 .flores-container.direita {
-    right: 450px;
+    right: -80px; /* Ajusta para ficar ao lado direito */
 }
 
 .flores-container img {
-    width: 80px;
+    width: 50px; /* Reduz o tamanho das flores */
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px; /* Bordas suaves */
 }
 
 .slideshow-container {
@@ -94,19 +95,22 @@ body {
     background-color: crimson;
 }
 
-@media (max-width: 600px) { /* Para celulares */
+@media (max-width: 600px) { /* Para telas menores */
     .imagem-container {
-        flex-direction: column; /* Alinha verticalmente para telas menores */
+        flex-direction: column; /* Ajusta para telas pequenas */
+        align-items: center;
     }
 
     .flores-container {
-        position: static; /* Remove posição absoluta para melhor adaptação */
+        position: static; /* Remove a posição absoluta */
         display: flex;
-        flex-direction: row; /* Muda a organização das flores para horizontal */
-        justify-content: center; /* Centraliza abaixo da imagem */
+        flex-direction: row; /* Alinha as flores horizontalmente abaixo da foto */
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px; /* Ajusta a distância */
     }
 
     .flores-container img {
-        width: 60px; /* Reduz o tamanho no celular */
+        width: 50px; /* Reduz o tamanho das flores */
     }
 }
