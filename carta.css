@@ -27,17 +27,36 @@ body {
     display: block;
 }
 
-.slideshow-container {
-    max-width: 600px;
-    margin: 20px auto;
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.mySlides img{
-    width: 150px;
+.carrossel {
+    display: flex;
+    width: 40%;
+    animation: roleta 10s linear infinite;
+}
+
+.carrossel img {
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
+    margin: 5px;
+    flex: 1;
+}
+
+@keyframes roleta {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(-250%); }
+    100% { transform: translateX(-250%); }
+    75% { transform: translateX(-300%); }
+    50% { transform: translateX(-200%); }
+    25% { transform: translateX(-100%); }
+    0% { transform: translateX(0%); }
 }
 
 .gif-below {
