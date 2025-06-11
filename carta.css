@@ -27,36 +27,6 @@ body {
     display: block;
 }
 
-.imagem-container {
-    display: flex;
-    align-items: center; /* Alinha a foto e as flores */
-    justify-content: center;
-    gap: 10px; /* Ajusta o espaçamento entre os elementos */
-    position: relative;
-}
-
-.flores-container {
-    display: flex;
-    flex-direction: column; /* Mantém as flores empilhadas */
-    gap: 5px;
-}
-
-.flores-container.esquerda {
-    position: relative;
-    margin-left: -90px; /* Ajusta para ficar ao lado esquerdo */
-}
-
-.flores-container.direita {
-    position: relative;
-    margin-right: -90px; /* Ajusta para ficar ao lado direito */
-}
-
-.flores-container img {
-    width: 50px; /* Ajusta o tamanho */
-    height: auto;
-    border-radius: 8px;
-}
-
 .slideshow-container {
     max-width: 600px;
     margin: 20px auto;
