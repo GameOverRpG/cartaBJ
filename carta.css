@@ -29,33 +29,32 @@ body {
 
 .imagem-container {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha a foto e as flores */
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Ajusta o espaçamento entre os elementos */
     position: relative;
 }
 
 .flores-container {
     display: flex;
-    flex-direction: column;
-    gap: 5px; /* Reduz espaço entre as flores */
-    position: absolute;
-    top: 50%; /* Ajusta a posição vertical */
-    transform: translateY(-50%);
+    flex-direction: column; /* Mantém as flores empilhadas */
+    gap: 5px;
 }
 
 .flores-container.esquerda {
-    left: -80px; /* Ajusta para ficar ao lado esquerdo */
+    position: relative;
+    margin-left: -90px; /* Ajusta para ficar ao lado esquerdo */
 }
 
 .flores-container.direita {
-    right: -80px; /* Ajusta para ficar ao lado direito */
+    position: relative;
+    margin-right: -90px; /* Ajusta para ficar ao lado direito */
 }
 
 .flores-container img {
-    width: 50px; /* Reduz o tamanho das flores */
+    width: 50px; /* Ajusta o tamanho */
     height: auto;
-    border-radius: 8px; /* Bordas suaves */
+    border-radius: 8px;
 }
 
 .slideshow-container {
@@ -95,22 +94,19 @@ body {
     background-color: crimson;
 }
 
-@media (max-width: 600px) { /* Para telas menores */
+@media (max-width: 600px) { /* Para celulares */
     .imagem-container {
-        flex-direction: column; /* Ajusta para telas pequenas */
-        align-items: center;
+        flex-direction: column; /* Alinha verticalmente para telas menores */
     }
 
     .flores-container {
-        position: static; /* Remove a posição absoluta */
+        position: static; /* Remove posição absoluta para melhor adaptação */
         display: flex;
-        flex-direction: row; /* Alinha as flores horizontalmente abaixo da foto */
-        justify-content: center;
-        gap: 5px;
-        margin-top: 10px; /* Ajusta a distância */
+        flex-direction: row; /* Muda a organização das flores para horizontal */
+        justify-content: center; /* Centraliza abaixo da imagem */
     }
 
     .flores-container img {
-        width: 50px; /* Reduz o tamanho das flores */
+        width: 60px; /* Reduz o tamanho no celular */
     }
 }
