@@ -1,3 +1,9 @@
+document.getElementById("musiquinha").addEventListener("click", () => {
+    let audio = new Audio("audio/Thinkin Bout You.mp3");
+    audio.load();
+    audio.play();
+});
+
 let slideIndex = 0;
 showSlides();
 
@@ -17,8 +23,3 @@ function showSlides() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 2000); // Muda imagem a cada 2 segundos
 }
-
-document.getElementById("musiquinha").addEventListener("click", () => {
-    let audio = new Audio("Thinkin Bout You.mp3");
-    audio.play();
-});
