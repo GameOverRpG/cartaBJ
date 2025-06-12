@@ -1,5 +1,5 @@
 document.getElementById("musiquinha").addEventListener("click", () => {
-    let audio = new Audio("audio/Thinkin Bout You.mp3");
+    let audio = new Audio("Thinkin Bout You.mp3");
     audio.load();
     audio.play();
 });
