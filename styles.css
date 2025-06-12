@@ -1,0 +1,106 @@
+body {
+    background-image: url('bege.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2em;
+    color: darkred;
+    margin-bottom: 20px;
+}
+
+.envelope {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    width: 20em;
+    height: 10em;
+    border-radius: .25em;
+    background: lemonchiffon;
+    cursor: pointer;
+}
+
+.envelope:before,
+.envelope:after {
+    position: absolute;
+    top: -.25em;
+    width: 40%;
+    height: 30%;
+    content: '';
+}
+
+.envelope:before {
+    left: 1em;
+    border-radius: 0 0 0 .25em;
+    box-shadow: -.2em .2em .2em dimgrey;
+    transform: skewX(37.5deg);
+}
+
+.envelope:after {
+    right: 1em;
+    border-radius: 0 0 .25em 0;
+    transform: skewX(-37.5deg);
+    box-shadow: .2em .2em .2em dimgrey;
+}
+
+@font-face {
+    font-family: 'Vanessa Loves You';
+    src: url('vanessalovesyou.ttf') format('truetype');
+}
+
+.titulo {
+    font-size: 2em;
+    color: darkred;
+    font-family: 'Vanessa Loves You', sans-serif;
+    margin-bottom: 20px;
+}
+
+@keyframes balancar {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.envelope {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    width: 20em;
+    height: 10em;
+    border-radius: .25em;
+    background: lemonchiffon;
+    cursor: pointer;
+    animation: balancar 1s ease-in-out infinite;
+
+}
+
+@keyframes chuva-coracoes {
+    0% { transform: translateY(50px) scale(1); opacity: 1; }
+    100% { transform: translateY(-200px) scale(1.5); opacity: 0; }
+}
+
+.heart-container {
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2em;
+    color: red;
+    animation: chuva-coracoes 3s ease-in-out infinite;
+}
